@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ARSnova PDF</title>
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.mjs"
+      type="module"
+    ></script>
+    <script src="viewer.js" type="module"></script>
+  </head>
+  <body>
+    <canvas id="pdf-canvas"></canvas>
+    <iframe
+      src="https://ars.abuenameh.com"
+      id="ars-iframe"
+      title="ARS question"
+    ></iframe>
+    <div id="footer">
+      <button id="prev">&lt;</button>
+      <button id="next">&gt;</button>
+    </div>
+  </body>
+</html>

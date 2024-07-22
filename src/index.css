@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+canvas {
+  height: calc(100% - 50px);
+  aspect-ratio: 4/3;
+  margin: auto;
+}
+
+iframe {
+  width: 100%;
+  height: calc(100% - 50px);
+  border: 0;
+  display: none;
+}
+
+#footer {
+  min-height: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+#prev,
+#next {
+  width: 30px;
+}
