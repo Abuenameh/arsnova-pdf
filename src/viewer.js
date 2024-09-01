@@ -25,7 +25,6 @@ function renderPage(num) {
   // Using promise to fetch the page
   pdfDoc.getPage(num).then(function (page) {
     page.getAnnotations().then(function (annotations) {
-      //   console.log(annotations);
       const arsAnnotations = annotations.filter(
         (annotation) =>
           annotation.annotationType === 1 &&
@@ -38,14 +37,13 @@ function renderPage(num) {
         iframe.style.display = "block";
         pageRendering = null;
       } else {
-        console.log(canvas.clientWidth);
+        iframe.style.display = "none";
+        canvas.style.display = "block";
         var viewport = page.getViewport({ scale: 1 });
         var scale = canvas.clientWidth / viewport.width;
         var scaledViewport = page.getViewport({ scale: scale });
         canvas.height = scaledViewport.height;
         canvas.width = scaledViewport.width;
-        iframe.style.display = "none";
-        canvas.style.display = "block";
 
         // Render PDF page into canvas context
         var renderContext = {
